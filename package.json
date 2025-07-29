@@ -2,7 +2,29 @@
     "name": "@withsprinkles/eslint-config",
     "type": "module",
     "version": "0.1.0",
+    "description": "Modern ESLint configuration with TypeScript support",
     "license": "MIT",
+    "author": "Mark Malstrom <mark@malstrom.me>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/withsprinkles/eslint-config"
+    },
+    "keywords": [
+        "eslint",
+        "config",
+        "typescript",
+        "javascript",
+        "react"
+    ],
+    "engines": {
+        "node": ">=22"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "prepublishOnly": "mise run build"
+    },
     "dependencies": {
         "@antfu/eslint-config": "^4.12.0",
         "@convex-dev/eslint-plugin": "^0.0.1-alpha.4",
@@ -29,6 +51,14 @@
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "tailwindcss": "^4.1.4",
+        "tsdown": "^0.13.0",
         "typescript": "^5.8.3"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./package.json": "./package.json"
     }
 }

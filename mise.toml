@@ -5,3 +5,19 @@ dprint = "latest"
 
 [settings.npm]
 bun = true
+
+[tasks.build]
+run = "./node_modules/.bin/tsdown"
+description = "Build the library"
+
+[tasks.dev]
+run = "./node_modules/.bin/tsdown --watch"
+description = "Build and watch for changes"
+
+[tasks.publish]
+run = "bun publish --access public"
+description = "Publish library to npm"
+
+[tasks.fmt]
+description = "Format the entire project"
+run = "dprint fmt"

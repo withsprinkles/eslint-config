@@ -1,13 +1,13 @@
 /* eslint-disable typescript/no-unsafe-assignment */
-import type { TypedFlatConfigItem } from "@antfu/eslint-config"
-import { isInEditorEnv } from "@antfu/eslint-config"
-import pluginVitest from "@vitest/eslint-plugin"
+import type { TypedFlatConfigItem } from "@antfu/eslint-config";
+import { isInEditorEnv } from "@antfu/eslint-config";
+import pluginVitest from "@vitest/eslint-plugin";
 // @ts-expect-error no types exist for this module
-import pluginNoOnlyTests from "eslint-plugin-no-only-tests"
-import { GLOB_TESTS } from "../globs"
+import pluginNoOnlyTests from "eslint-plugin-no-only-tests";
+import { GLOB_TESTS } from "../globs";
 
 // Hold the reference so we don't redeclare the plugin on each call
-let _pluginTest: any
+let _pluginTest: any;
 
 export async function vitest(): Promise<TypedFlatConfigItem[]> {
     _pluginTest = _pluginTest || {
@@ -17,9 +17,9 @@ export async function vitest(): Promise<TypedFlatConfigItem[]> {
             // extend `test/no-only-tests` rule
             ...pluginNoOnlyTests.rules,
         },
-    }
+    };
 
-    const IN_EDITOR = isInEditorEnv()
+    const IN_EDITOR = isInEditorEnv();
 
     return [
         {
@@ -46,5 +46,5 @@ export async function vitest(): Promise<TypedFlatConfigItem[]> {
                 },
             },
         },
-    ]
+    ];
 }

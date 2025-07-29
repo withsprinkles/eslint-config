@@ -8,6 +8,7 @@
         "strings": "on"
     },
 
+    "dprint.experimentalLsp": true,
     "biome.enabled": false,
     "prettier.enable": false,
     "deno.enable": false,
@@ -29,7 +30,7 @@
         "*.css": "$(capture).css.map, $(capture).*.css",
         ".env": "*.env, .env.*, .envrc, env.d.ts",
         "package.json": ".bun-version, .github*, .npmrc, .vscode*, biome*, bun.lock, dprint.json, mise.toml, tsconfig.*, worker-configuration.*, wrangler.toml, wrangler.json*, workspace.json",
-        "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+        "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*"
     },
     "files.exclude": {
         "**/.DS_Store": true
@@ -68,6 +69,6 @@
 
     "symbols.files.associations": {
         "*.plugin.ts": "eslint",
-        "eslint.config.ts": "eslint",
+        "eslint.config.ts": "eslint"
     }
 }

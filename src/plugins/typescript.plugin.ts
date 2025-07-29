@@ -76,15 +76,15 @@ export function typeScript({
 
             ...(type === "lib"
                 ? {
-                      "ts/explicit-function-return-type": [
-                          "error",
-                          {
-                              allowExpressions: true,
-                              allowHigherOrderFunctions: true,
-                              allowIIFEs: true,
-                          },
-                      ],
-                  }
+                    "ts/explicit-function-return-type": [
+                        "error",
+                        {
+                            allowExpressions: true,
+                            allowHigherOrderFunctions: true,
+                            allowIIFEs: true,
+                        },
+                    ],
+                }
                 : {}),
         },
     };

@@ -138,18 +138,18 @@ export function react({
                         allowExportNames: [
                             ...(USING_REACT_ROUTER_FW_MODE
                                 ? [
-                                      "loader",
-                                      "clientLoader",
-                                      "action",
-                                      "clientAction",
-                                      "ErrorBoundary",
-                                      "HydrateFallback",
-                                      "headers",
-                                      "handle",
-                                      "links",
-                                      "meta",
-                                      "shouldRevalidate",
-                                  ]
+                                    "loader",
+                                    "clientLoader",
+                                    "action",
+                                    "clientAction",
+                                    "ErrorBoundary",
+                                    "HydrateFallback",
+                                    "headers",
+                                    "handle",
+                                    "links",
+                                    "meta",
+                                    "shouldRevalidate",
+                                ]
                                 : []),
                         ],
                     },
