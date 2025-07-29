@@ -40,9 +40,6 @@ export function jsonc(): TypedFlatConfigItem {
             "jsonc/no-useless-escape": "error",
             "jsonc/space-unary-ops": "error",
             "jsonc/valid-json-number": "error",
-
-            "jsonc/sort-keys": "warn",
-            "jsonc/sort-array-values": "warn",
         },
     };
 }
