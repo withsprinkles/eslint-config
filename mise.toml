@@ -1,0 +1,7 @@
+[tools]
+node = "lts"
+bun = "latest"
+dprint = "latest"
+
+[settings.npm]
+bun = true

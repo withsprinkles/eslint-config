@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme static {
+    --font-*: initial;
+    --font-sans:
+        "Inter var", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "JetBrains Mono", monospace;
+    --font-dm-serif: "DM Serif Display", serif;
+    --font-ibm-plex: "IBM Plex Sans", sans-serif;
+}
+
+html {
+    background-color: var(--color-sky-50);
+    color: var(--color-slate-600);
+    margin: auto;
+    scroll-behavior: smooth;
+
+    min-height: 100vh;
+    display: flex;
+
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+        env(safe-area-inset-left);
+
+    padding: 1rem 3.5rem 1rem 3.5rem;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-slate-900);
+        color: var(--color-slate-300);
+    }
+}
+
+body {
+    width: 100%;
+    max-width: var(--container-2xl);
+    margin: auto;
+
+    &.medium {
+        max-width: var(--container-4xl);
+    }
+
+    &.wide {
+        max-width: var(--container-6xl);
+    }
+}
+
+@layer components {
+    a[href] {
+        text-decoration: underline;
+        text-decoration-color: color-mix(in oklab, var(--color-slate-600) 35%, transparent);
+        text-decoration-thickness: 12%;
+
+        @media (prefers-color-scheme: dark) {
+            text-decoration-color: color-mix(in oklab, var(--color-slate-300) 35%, transparent);
+        }
+    }
+
+    a[href]:hover {
+        text-decoration-color: color-mix(in oklab, var(--color-slate-600) 65%, transparent);
+        filter: brightness(85%);
+
+        @media (prefers-color-scheme: dark) {
+            filter: unset;
+            text-decoration-color: color-mix(in oklab, var(--color-slate-300) 65%, transparent);
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        time {
+            opacity: 50%;
+        }
+    }
+}

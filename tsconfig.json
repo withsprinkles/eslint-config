@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "allowImportingTsExtensions": true,
+        "checkJs": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "verbatimModuleSyntax": true,
+        "skipLibCheck": true
+    },
+    "include": ["**/*.js", "**/*.ts", "**/*.tsx", "eslint.config.ts"]
+}
