@@ -25,6 +25,9 @@ export function typeScript({
                 tsconfigRootDir: process.cwd(),
             },
         },
+        plugins: {
+            ts: pluginTypeScript,
+        },
         rules: {
             ...renameRules(pluginTypeScript.configs["eslint-recommended"].overrides![0].rules!, {
                 "@typescript-eslint": "ts",

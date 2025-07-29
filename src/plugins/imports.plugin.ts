@@ -18,7 +18,7 @@ export function imports(): TypedFlatConfigItem {
             "import/no-named-default": "warn",
             "import/no-self-import": "error",
             "import/no-webpack-loader-syntax": "error",
-            "import/newline-after-import": ["warn", { count: 1, exactCount: true }],
+            // "import/newline-after-import": ["warn", { count: 1, exactCount: true }],
 
             "perfectionist/sort-exports": ["warn", { order: "asc", type: "natural" }],
             "perfectionist/sort-imports": [

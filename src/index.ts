@@ -1,9 +1,7 @@
-export { defineConfig } from "./utils";
-export type { Config } from "./utils";
-
 // Plugins
 export { codeStyle } from "./plugins/code-style.plugin";
 export { comments } from "./plugins/comments.plugin";
+
 export { convex } from "./plugins/convex.plugin";
 export { drizzle } from "./plugins/drizzle.plugin";
 export { ignores } from "./plugins/ignores.plugin";
@@ -21,3 +19,5 @@ export { toml } from "./plugins/toml.plugin";
 export { typeScript } from "./plugins/typescript.plugin";
 export { vitest } from "./plugins/vitest.plugin";
 export { yaml } from "./plugins/yaml.plugin";
+export { defineConfig } from "./utils";
+export type { Config } from "./utils";

@@ -1,4 +1,3 @@
-/* eslint-disable typescript/no-unsafe-assignment */
 import type { TypedFlatConfigItem } from "@antfu/eslint-config";
 import { isInEditorEnv } from "@antfu/eslint-config";
 import pluginVitest from "@vitest/eslint-plugin";

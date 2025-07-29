@@ -3,6 +3,7 @@ import { existsSync as fileExistsSync } from "node:fs";
 import { join } from "node:path";
 import { isInEditorEnv } from "@antfu/eslint-config";
 import { isPackageExists as packageExistsSync } from "local-pkg";
+
 const configFileExistsSync = (file: string) => fileExistsSync(join(process.cwd(), file));
 
 /**

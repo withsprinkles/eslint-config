@@ -22,7 +22,7 @@ export default defineConfig({
     plugins: [
         codeStyle(),
         comments(),
-        ignores(),
+        ignores(["eslint.config.ts", "tsdown.config.ts"]),
         imports(),
         javaScript(),
         typeScript({ tsconfigPath: "./tsconfig.json" }),
