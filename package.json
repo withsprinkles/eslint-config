@@ -1,7 +1,7 @@
 {
     "name": "@withsprinkles/eslint-config",
     "type": "module",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Modern ESLint configuration with TypeScript support",
     "license": "MIT",
     "author": "Mark Malstrom <mark@malstrom.me>",
