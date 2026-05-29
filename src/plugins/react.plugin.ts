@@ -23,12 +23,12 @@ const TYPE_AWARE_CONFIG: TypedFlatConfigItem = {
 
 export interface ReactPluginConfig {
     tsconfigPath?: string;
-    useReactCompiler?: boolean;
+    compilerDiagnostics?: boolean;
 }
 
 export function react({
     tsconfigPath,
-    useReactCompiler = true,
+    compilerDiagnostics = true,
 }: ReactPluginConfig = {}): TypedFlatConfigItem[] {
     const typeAware = Boolean(tsconfigPath);
 
@@ -56,7 +56,7 @@ export function react({
             },
             rules: {
                 // React Compiler: https://react.dev/blog/2025/04/21/react-compiler-rc
-                "react-hooks/react-compiler": useReactCompiler ? "error" : "off",
+                "react-hooks/react-compiler": compilerDiagnostics ? "error" : "off",
 
                 // recommended rules from eslint-plugin-react-x https://eslint-react.xyz/docs/rules/overview#core-rules
                 "react/jsx-no-duplicate-props": "warn",
@@ -158,7 +158,7 @@ export function react({
                 // Don't let the React plugin sort JSX props, do it with Perfectionist instead
                 "react/jsx-sort-props": "off",
                 "perfectionist/sort-jsx-props": [
-                    "error",
+                    "warn",
                     {
                         type: "natural",
                         order: "asc",

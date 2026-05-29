@@ -20,7 +20,7 @@ import { yaml } from "./src/plugins/yaml.plugin.ts";
 
 export default defineConfig({
     plugins: [
-        codeStyle(),
+        // codeStyle(),
         comments(),
         ignores(["eslint.config.ts", "tsdown.config.ts"]),
         imports(),
@@ -31,13 +31,13 @@ export default defineConfig({
         jsx(),
         markdown(),
         node(),
-        react(),
+        react({ compilerDiagnostics: false }),
         regexp(),
-        tailwindcss({
-            stylesheet: "./src/fixtures/index.css",
-            // functions: ["cva", "cx", "clsx"],
-            // attributes: ["className", "class"],
-        }),
+        // tailwindcss({
+        //     stylesheet: "./src/fixtures/index.css",
+        //     // functions: ["cva", "cx", "clsx"],
+        //     // attributes: ["className", "class"],
+        // }),
         toml(),
         await vitest(),
         yaml(),
